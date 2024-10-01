@@ -5,7 +5,6 @@ import { RouterLink } from 'vue-router';
 
 <template>
   <!-- <v-responsive class="border rounded"> -->
-    <v-app>
       <v-app-bar 
         :elevation="2"
         title="Carribean Grill">
@@ -36,6 +35,5 @@ import { RouterLink } from 'vue-router';
         </RouterLink>
      
       </v-app-bar>
-    </v-app>
   <!-- </v-responsive>  -->
 </template>

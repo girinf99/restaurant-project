@@ -5,9 +5,11 @@ import { RouterView } from 'vue-router';
 </script>
 
 <template>
-   <Header />
-   <RouterView />
-   <Footer />
+   <v-app>
+      <Header />
+      <RouterView />
+      <Footer />
+   </v-app>
 </template>
 
 
