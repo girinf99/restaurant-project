@@ -12,7 +12,7 @@ const  icons = ref([
 
 <template>
   <v-footer
-    class="bg-grey-lighten-1 text-center d-flex flex-column"
+    class="bg-teal-lighten-4 text-center d-flex flex-column"
   >
     <div>
       <v-btn

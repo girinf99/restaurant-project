@@ -3,8 +3,10 @@
 
  #app {
   font-family: Urbanist;
+  margin: 0 auto;
 }
 
-.v-window__controls > button {
-  color: red;
+body{
+  align-items: center;
 }
+
