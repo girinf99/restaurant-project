@@ -5,11 +5,15 @@ import { RouterView } from 'vue-router';
 </script>
 
 <template>
-   <v-app>
-      <Header />
-      <RouterView />
-      <Footer />
-   </v-app>
+   <v-responsive class="border rounded">
+      <v-app>
+         <Header />
+         <v-main>
+            <RouterView />
+         </v-main>
+         <Footer />
+      </v-app>
+   </v-responsive>
 </template>
 
 
