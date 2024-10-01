@@ -1,0 +1,10 @@
+/* @import './base.css'; */
+
+
+ #app {
+  font-family: Urbanist;
+}
+
+.v-window__controls > button {
+  color: red;
+}
