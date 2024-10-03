@@ -12,6 +12,10 @@ const props = defineProps({
   width: {
     type: Number,
     required: true
+  },
+  link:{
+    type: Function,
+    required: false
   }
 })
 
@@ -19,6 +23,6 @@ const props = defineProps({
 
 <template>
 
-  <v-img :src="getLocalImage(url)" class="logo" contain :max-width="width" />
+  <v-img :src="getLocalImage(url)" class="logo" contain :max-width="width" @click="link" :class="`cursor-pointer`"/>
 
 </template>

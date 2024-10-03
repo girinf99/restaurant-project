@@ -52,10 +52,10 @@ const submit = handleSubmit(values => {
 
         <form @submit.prevent="submit">
           <v-text-field v-model="name.value.value" :counter="20" :error-messages="name.errorMessage.value" label="Name"
-            width="300" variant="underlined" prepend-icon="mdi-account"></v-text-field>
+            width="400" variant="underlined" prepend-icon="mdi-account"></v-text-field>
 
           <v-text-field v-model="email.value.value" :error-messages="email.errorMessage.value" label="E-mail"
-            width="300" variant="underlined" prepend-icon="mdi-email"></v-text-field>
+            width="400" variant="underlined" prepend-icon="mdi-email"></v-text-field>
 
           <v-textarea v-model="message.value.value" :error-messages="message.errorMessage.value"
             label="Write the message" width="400" variant="underlined" prepend-icon="mdi-comment"></v-textarea>

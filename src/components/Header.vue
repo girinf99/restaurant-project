@@ -1,15 +1,19 @@
 <script setup>
 import { onMounted, ref, computed } from 'vue';
-import { RouterLink } from 'vue-router';
+import { RouterLink, useRouter } from 'vue-router';
 import localImage from './localImage.vue';
 
+const router = useRouter();
+
+const getLink = () => {
+  router.push('/')
+}
 </script>
 
 <template>
-  <!-- <v-responsive class="border rounded"> -->
   <v-app-bar :elevation="2" height="100">
 
-    <localImage :url="'../assets/pic/logo2.png'" :width="400" />
+    <localImage :url="'../assets/pic/logo2.png'" :width="400" :link="getLink"/>
 
 
     <v-app-bar-title class="text-h5"></v-app-bar-title>
@@ -40,5 +44,5 @@ import localImage from './localImage.vue';
     </RouterLink>
 
   </v-app-bar>
-  <!-- </v-responsive>  -->
+
 </template>

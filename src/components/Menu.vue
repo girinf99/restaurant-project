@@ -47,7 +47,7 @@ const getLocalImage = (url) => {
         <v-card color="basil" flat>
 
           <v-flex>
-            <v-img :src="getLocalImage(item.src)" aspect-ratio="1.25" contain></v-img>
+            <v-img :src="getLocalImage(item.src)" aspect-ratio="1" contain></v-img>
           </v-flex>
 
 

@@ -57,37 +57,39 @@ const getLocalImage = (url) => {
 
 
       <v-container class="mt-10 mb-10">
-        <h1 class="text-teal-darken-3">WELCOME TO CARIBBEAN GRILL</h1>
+        <h1 class="text-teal-darken-3">WELCOME TO CARiBBEAN GRiLL</h1>
         <p>Caribbean Grill offers a vibrant taste of the islands with delicious jerk chicken, spicy shrimp, and fresh
           seafood,
           all expertly grilled. Enjoy a lively atmosphere and refreshing cocktails for a true tropical escape!</p>
       </v-container>
 
 
-      <v-container class="full-height text-center bg-teal-lighten-5">
-        <h1 class="text-teal-darken-3 mb-5">OUR MENU</h1>
-        <v-row align="center" class="full-height" justify="center">
-          <template v-for="(menu, i) in menus" :key="i">
-            <v-col cols="12" md="4">
-              <v-hover v-slot="{ isHovering, props }" open-delay="200">
-                <v-card :class="{ 'on-hover': isHovering }" :elevation="isHovering ? 16 : 2" class="mx-auto "
-                  height="300" max-width="300" v-bind="props">
-                  <v-img :src="getLocalImage(menu.src)" height="250px" cover></v-img>
-                  <v-card-text class="bg-teal-darken-3 text-white text-h6 d-flex flex-column">
-                    {{ menu.name }}
-                  </v-card-text>
+      <v-container class="full-height ma-0 text-center bg-teal-lighten-5" style="max-width: 100%">
+        <div style="max-width: 1280px; margin-left: auto; margin-right:auto">
+          <h1 class="text-teal-darken-3 mb-5">OUR MENU</h1>
+          <v-row align="center" class="full-height" justify="center">
+            <template v-for="(menu, i) in menus" :key="i">
+              <v-col cols="12" md="4">
+                <v-hover v-slot="{ isHovering, props }" open-delay="200">
+                  <v-card :class="{ 'on-hover': isHovering }" :elevation="isHovering ? 16 : 2" class="mx-auto "
+                    height="300" max-width="300" v-bind="props">
+                    <v-img :src="getLocalImage(menu.src)" height="250px" cover></v-img>
+                    <v-card-text class="bg-teal-darken-3 text-white text-h6 d-flex flex-column">
+                      {{ menu.name }}
+                    </v-card-text>
 
-                </v-card>
-              </v-hover>
-            </v-col>
-          </template>
+                  </v-card>
+                </v-hover>
+              </v-col>
+            </template>
 
-          <RouterLink to="/menu">
-            <v-btn class="mt-7 text-teal-darken-3">
-              VIEW OUR FULL MENU
-            </v-btn>
-          </RouterLink>
-        </v-row>
+            <RouterLink to="/menu">
+              <v-btn class="mt-7 text-teal-darken-3">
+                VIEW OUR FULL MENU
+              </v-btn>
+            </RouterLink>
+          </v-row>
+        </div>
       </v-container>
 
 
