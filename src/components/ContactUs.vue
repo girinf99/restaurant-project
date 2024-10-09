@@ -44,50 +44,48 @@ const submit = handleSubmit(values => {
 </script>
 
 <template>
-  <v-container>
+  <v-container class="mt-4">
     <v-row>
       <v-col>
-        <h3 class="text-teal-darken-3">Business Information</h3>
-        <p>For any inquiries please fill in this form and we will get back to you.</p>
+        <div style="display: inline-block">
+          <h3 class="text-teal-darken-3">Business Information</h3>
+          <p>For any inquiries please fill in this form and we will get back to you.</p>
 
-        <form @submit.prevent="submit">
-          <v-text-field v-model="name.value.value" :counter="20" :error-messages="name.errorMessage.value" label="Name"
-            width="400" variant="underlined" prepend-icon="mdi-account"></v-text-field>
+          <form @submit.prevent="submit">
+            <v-text-field v-model="name.value.value" :counter="20" :error-messages="name.errorMessage.value"
+              label="Name" width="w-100" variant="underlined" prepend-icon="mdi-account"></v-text-field>
 
-          <v-text-field v-model="email.value.value" :error-messages="email.errorMessage.value" label="E-mail"
-            width="400" variant="underlined" prepend-icon="mdi-email"></v-text-field>
+            <v-text-field v-model="email.value.value" :error-messages="email.errorMessage.value" label="E-mail"
+              width="w-100" variant="underlined" prepend-icon="mdi-email"></v-text-field>
 
-          <v-textarea v-model="message.value.value" :error-messages="message.errorMessage.value"
-            label="Write the message" width="400" variant="underlined" prepend-icon="mdi-comment"></v-textarea>
-
-          <v-btn class="me-4 text-teal-darken-3" type="submit" style="margin-top: 20px; margin-left: 300px">
-            Submit
-          </v-btn>
-
-          <!-- <v-btn @click="handleReset">
-          clear
-        </v-btn> -->
-        </form>
+            <v-textarea v-model="message.value.value" :error-messages="message.errorMessage.value" auto-grow rows="2"
+              label="Write the message" width="w-100" variant="underlined" prepend-icon="mdi-comment"></v-textarea>
+            
+            <v-btn class="text-teal-darken-3 mt-6" type="submit" style="float: right">
+              Submit
+            </v-btn>
+          </form>
+        </div>
       </v-col>
 
       <v-col>
-        <div style="margin-bottom:40px">
+        <h3 class="text-teal-darken-3">Location</h3>
+        <GoogleMap api-key="AIzaSyCNR4_znZFSeTfsm7b2gn6uNhz9yk7-DPY" style="width: 500px; height: 300px" :zoom="15"
+          :center="center">
+          <Marker :options="{ position: center }"></Marker>
+        </GoogleMap>
+
+        <div class="mb-8 mt-8">
           <h3 class="text-teal-darken-3">Operation Hours</h3>
           <p>Everyday 11 AM–9 PM</p>
         </div>
 
 
-        <div style="margin-bottom:40px">
+        <div class="mb-8">
           <h3 class="text-teal-darken-3">General Information</h3>
           <p>emailhere@gmail.com</p>
           <p>+1 (703)-2418947</p>
         </div>
-
-        <h3 class="text-teal-darken-3">Location</h3>
-        <GoogleMap api-key="AIzaSyCNR4_znZFSeTfsm7b2gn6uNhz9yk7-DPY" style="width: 300px; height: 300px" :zoom="15"
-          :center="center">
-          <Marker :options="{ position: center }"></Marker>
-        </GoogleMap>
       </v-col>
 
     </v-row>

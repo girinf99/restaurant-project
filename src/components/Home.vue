@@ -64,15 +64,16 @@ const getLocalImage = (url) => {
       </v-container>
 
 
-      <v-container class="full-height ma-0 text-center bg-teal-lighten-5" style="max-width: 100%">
-        <div style="max-width: 1280px; margin-left: auto; margin-right:auto">
+      <v-container class="full-height text-center bg-teal-lighten-5" style="max-width: 100%">
+        <!-- style="max-width: 1280px; margin-left: auto; margin-right:auto; height:480px" -->
+        <div class="mb-8">
           <h1 class="text-teal-darken-3 mb-5">OUR MENU</h1>
           <v-row align="center" class="full-height" justify="center">
             <template v-for="(menu, i) in menus" :key="i">
               <v-col cols="12" md="4">
                 <v-hover v-slot="{ isHovering, props }" open-delay="200">
                   <v-card :class="{ 'on-hover': isHovering }" :elevation="isHovering ? 16 : 2" class="mx-auto "
-                    height="300" max-width="300" v-bind="props">
+                    height="h-auto" max-width="300" v-bind="props">
                     <v-img :src="getLocalImage(menu.src)" height="250px" cover></v-img>
                     <v-card-text class="bg-teal-darken-3 text-white text-h6 d-flex flex-column">
                       {{ menu.name }}
@@ -104,6 +105,8 @@ const getLocalImage = (url) => {
     </v-app>
   </v-responsive>
 </template>
+
+
 <style>
 .v-btn .v-btn__content .v-icon {
   color: black;
