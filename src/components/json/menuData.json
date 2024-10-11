@@ -1,0 +1,14 @@
+[
+  {
+    "src": "../assets/pic/fullmenu.jpg",
+    "type": "Appetizers"
+  },
+  {
+    "src": "../assets/pic/fullmenu2.jpg",
+    "type": "Entrees"
+  },
+  {
+    "src": "../assets/pic/fullmenu.jpg",
+    "type": "Deserts"
+  }
+]

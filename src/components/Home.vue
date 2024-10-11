@@ -1,43 +1,10 @@
 <script setup>
-import { onMounted, ref, computed } from 'vue';
 import { RouterLink } from 'vue-router';
-
-
-
-const items = ref([
-  {
-    src: '../assets/pic/dalem.jpg',
-  },
-  {
-    src: '../assets/pic/depan.jpg',
-  },
-  {
-    src: '../assets/pic/depan2.jpg',
-  },
-  {
-    src: '../assets/pic/dalem2.jpg',
-  },
-])
-
-const menus = ref([
-  {
-    src: '../assets/pic/menu1.jpg',
-    name: 'Cuban Sandwich'
-  },
-  {
-    src: '../assets/pic/menu2.jpg',
-    name: 'Roasted Chicken'
-  },
-  {
-    src: '../assets/pic/menu3.jpg',
-    name: 'Black Bean'
-  },
-])
+import homeData from './json/homeData.json'
 
 const getLocalImage = (url) => {
   return new URL(`${url}`, import.meta.url).href
 }
-
 </script>
 
 <template>
@@ -51,16 +18,14 @@ const getLocalImage = (url) => {
           <v-btn icon="mdi-arrow-right" variant="flat" @click="props.onClick" color="white"></v-btn>
         </template>
 
-        <v-carousel-item v-for="(item, i) in items" :key="i" :src="getLocalImage(item.src)" cover></v-carousel-item>
+        <v-carousel-item v-for="(item, i) in homeData[0].items" :key="i" :src="getLocalImage(item.src)" cover></v-carousel-item>
       </v-carousel>
 
 
 
       <v-container class="mt-10 mb-10">
-        <h1 class="text-teal-darken-3">WELCOME TO CARiBBEAN GRiLL</h1>
-        <p>Caribbean Grill offers a vibrant taste of the islands with delicious jerk chicken, spicy shrimp, and fresh
-          seafood,
-          all expertly grilled. Enjoy a lively atmosphere and refreshing cocktails for a true tropical escape!</p>
+        <h1 class="text-teal-darken-3">WELCOME TO {{ homeData[2].intro[0].name }}</h1>
+        <p>{{ homeData[2].intro[0].welcome }}</p>
       </v-container>
 
 
@@ -69,7 +34,7 @@ const getLocalImage = (url) => {
         <div class="mb-8">
           <h1 class="text-teal-darken-3 mb-5">OUR MENU</h1>
           <v-row align="center" class="full-height" justify="center">
-            <template v-for="(menu, i) in menus" :key="i">
+            <template v-for="(menu, i) in homeData[1].menus" :key="i">
               <v-col cols="12" md="4">
                 <v-hover v-slot="{ isHovering, props }" open-delay="200">
                   <v-card :class="{ 'on-hover': isHovering }" :elevation="isHovering ? 16 : 2" class="mx-auto "

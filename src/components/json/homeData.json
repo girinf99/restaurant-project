@@ -1,0 +1,41 @@
+[
+  {
+    "items": [
+      {
+        "src": "../assets/pic/dalem.jpg"
+      },
+      {
+        "src": "../assets/pic/depan.jpg"
+      },
+      {
+        "src": "../assets/pic/depan2.jpg"
+      },
+      {
+        "src": "../assets/pic/dalem2.jpg"
+      }
+    ]
+  },
+  {
+    "menus": [
+      {
+        "src": "../assets/pic/menu1.jpg",
+        "name": "Cuban Sandwich"
+      },
+      {
+        "src": "../assets/pic/menu2.jpg",
+        "name": "Roasted Chicken"
+      },
+      {
+        "src": "../assets/pic/menu3.jpg",
+        "name": "Black Bean"
+      }
+    ]
+  },{
+    "intro": [
+      {
+        "name": "CARiBBEAN GRiLL",
+        "welcome": "Caribbean Grill offers a vibrant taste of the islands with delicious jerk chicken, spicy shrimp, and fresh\n          seafood,\n          all expertly grilled. Enjoy a lively atmosphere and refreshing cocktails for a true tropical escape!"
+      }
+    ]
+  }
+]
